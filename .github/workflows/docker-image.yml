@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Login to Heroku Registry
       run: |
-        echo "${{ secrets.HEROKU_API_KEY }}" | docker login --username herbertdoc --password-stdin registry.heroku.com
+        echo "d1db3d08-58f4-4db1-85ea-eaadf8ebc8d4" | docker login --username herbertdoc --password-stdin registry.heroku.com
         heroku container:login
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
